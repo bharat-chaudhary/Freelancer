@@ -1,0 +1,33 @@
+﻿@model Freelancer.Models.Payment
+
+@{
+    Layout = "~/Views/Shared/_EmployerLayout.cshtml";
+    ViewData["Title"] = "Payment Confirmation";
+}
+
+<div class="card p-4">
+    <h2 class="text-success">Thank you! Your payment was successfully processed.</h2>
+
+    <table class="table table-striped">
+        <tr><th>Payment ID</th><td>@Model.PaymentId</td></tr>
+        <tr><th>Project</th><td>@Model.ProjectId</td></tr>
+        <tr><th>Amount</th><td>@Model.Amount.ToString("C")</td></tr>
+        <tr><th>Payment Method</th><td>@Model.PaymentMethod</td></tr>
+        <tr><th>Date</th><td>@Model.PaymentDate.ToString("f")</td></tr>
+        <tr><th>Status</th><td>@Model.Status</td></tr>
+        <tr><th>Transaction ID</th><td>@Model.TransactionId</td></tr>
+        <tr>
+            <th>Receipt Image</th>
+            <td>
+                @if (!string.IsNullOrEmpty(Model.ReceiptImagePath))
+                {
+                    <img src="~/images/Scanner.jpg" alt="Receipt Image" style="max-width: 300px;" />
+                }
+                else
+                {
+                    <p>No receipt uploaded.</p>
+                }
+            </td>
+        </tr>
+    </table>
+</div>

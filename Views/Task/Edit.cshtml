@@ -1,0 +1,61 @@
+﻿@model Freelancer.Models.ProjectTask
+@{
+    Layout = "~/Views/Shared/_FreelancerLayout.cshtml";
+    ViewData["Title"] = "Edit Task";
+}
+
+<div class="container mt-4">
+    <h2>Edit Task</h2>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="Edit" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="TaskId" />
+                <input type="hidden" asp-for="ProjectId" />
+
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Status" class="form-label"></label>
+                    <select asp-for="Status" class="form-select">
+                        <option value="ToDo">To Do</option>
+                        <option value="InProgress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="OnHold">On Hold</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DueDate" class="form-label"></label>
+                    <input asp-for="DueDate" class="form-control" type="date" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="CompletionDate" class="form-label"></label>
+                    <input asp-for="CompletionDate" class="form-control" type="date" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="TaskDescription" class="form-label"></label>
+                    <textarea asp-for="TaskDescription" class="form-control" rows="4"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="UserId" class="form-label">Assign To</label>
+                    <select asp-for="UserId" class="form-select" asp-items="ViewBag.UserId"></select>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <a asp-action="Index" asp-route-projectId="@Model.ProjectId" class="btn btn-secondary me-2">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

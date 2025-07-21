@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Freelancer.Models.Audit>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Audit Logs";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-primary">Audit Logs</h2>
+        <form method="get" asp-action="AuditLogs" class="d-flex" style="max-width: 300px;">
+            <input type="text" name="search" class="form-control me-2" placeholder="Search by username..." value="@ViewBag.Search" />
+            <button type="submit" class="btn btn-outline-primary">
+                <i class="bi bi-search"></i> Search
+            </button>
+        </form>
+    </div>
+
+    <div class="table-responsive shadow rounded">
+        <table class="table table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+         
+                    <th>Username</th>
+                    <th>Login Time</th>
+                    <th>Logout Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var audit in Model)
+                {
+                    <tr>
+                        
+                        <td>@audit.User?.Username</td>
+                        <td>@audit.Login_time.ToString("g")</td>
+                        <td>
+                            @if (audit.Logout_time.HasValue)
+                            {
+                                @audit.Logout_time.Value.ToString("g")
+                            }
+                            else
+                            {
+                                @Html.Raw("<span class='text-danger fw-semibold'>Still Logged In</span>")
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+﻿@model Freelancer.Models.ViewModels.PaymentViewModel
+
+@{
+    Layout = "~/Views/Shared/_EmployerLayout.cshtml";
+    ViewData["Title"] = "Initiate Payment";
+}
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4 text-primary">Initiate Payment</h2>
+
+    <div class="card shadow-sm border-0 rounded-4 p-4">
+        <div class="card-body">
+            <form asp-action="ProcessPayment" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+
+                <input type="hidden" asp-for="ProjectId" />
+
+                <div class="form-group mb-3">
+                    <label asp-for="Title" class="form-label">Project Title</label>
+                    <input asp-for="Title" class="form-control" readonly />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="FreelancerName" class="form-label">Freelancer</label>
+                    <input asp-for="FreelancerName" class="form-control" readonly />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Amount" class="form-label">Amount</label>
+                    <input asp-for="Amount" class="form-control" readonly />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="PaymentMethod" class="form-label">Payment Method</label>
+                    <select asp-for="PaymentMethod" class="form-select">
+                        <option value="CreditCard">Credit Card</option>
+                        <option value="BankTransfer">Bank Transfer</option>
+                        <option value="PayPal">PayPal</option>
+                    </select>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="TransactionId" class="form-label">Transaction ID</label>
+                    <input asp-for="TransactionId" class="form-control" placeholder="Enter Transaction ID" />
+                </div>
+
+                <!-- Receipt Image Upload -->
+                <div class="form-group mb-4">
+                    <label for="ReceiptImage" class="form-label">Upload Receipt</label>
+                    <input type="file" name="ReceiptImage" class="form-control" accept="~/images/Scaner.jpg" />
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Submit Payment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

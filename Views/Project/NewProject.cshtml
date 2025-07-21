@@ -1,0 +1,75 @@
+﻿@model Freelancer.Models.Project
+
+@{
+    Layout = "~/Views/Shared/_EmployerLayout.cshtml";
+    ViewData["Title"] = "Create New Project";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-primary text-white fw-bold">
+                    <i class="bi bi-plus-circle me-2"></i> Create New Project
+                </div>
+                <div class="card-body p-4">
+
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success">
+                            <i class="bi bi-check-circle-fill me-2"></i>@TempData["SuccessMessage"]
+                        </div>
+                    }
+
+                    <form asp-action="NewProject" method="post">
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label fw-semibold">Title</label>
+                            <input asp-for="Title" class="form-control" placeholder="e.g. Build a Portfolio Website" />
+                            <span asp-validation-for="Title" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label fw-semibold">Description</label>
+                            <textarea asp-for="Description" class="form-control" rows="4" placeholder="Describe the project details..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Budget" class="form-label fw-semibold">Budget ($)</label>
+                            <input asp-for="Budget" class="form-control" type="number" step="0.01" placeholder="e.g. 500" />
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label asp-for="Start_Date" class="form-label fw-semibold">Start Date</label>
+                                <input asp-for="Start_Date" class="form-control" type="date" />
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label asp-for="End_Date" class="form-label fw-semibold">End Date</label>
+                                <input asp-for="End_Date" class="form-control" type="date" />
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label asp-for="Bid_Date" class="form-label fw-semibold">Bid Deadline</label>
+                                <input asp-for="Bid_Date" class="form-control" type="date" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Language" class="form-label fw-semibold">Preferred Language</label>
+                            <select asp-for="Language" class="form-select" asp-items="new SelectList(ViewBag.Languages)">
+                                <option value="">-- Select Language --</option>
+                            </select>
+                            <span asp-validation-for="Language" class="text-danger small"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100">
+                            <i class="bi bi-check2-square me-1"></i> Create Project
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿@model Freelancer.Models.ProjectTask
+
+@{
+    Layout = "~/Views/Shared/_FreelancerLayout.cshtml";
+    ViewData["Title"] = "Task Details";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Task Details</h2>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Title</dt>
+                <dd class="col-sm-9">@Model.Title</dd>
+
+                <dt class="col-sm-3">Project</dt>
+                <dd class="col-sm-9">@Model.Project?.Title</dd>
+
+                <dt class="col-sm-3">Assigned To</dt>
+                <dd class="col-sm-9">@Model.User?.FullName</dd>
+
+                <dt class="col-sm-3">Status</dt>
+                <dd class="col-sm-9">@Model.Status</dd>
+
+                <dt class="col-sm-3">Due Date</dt>
+                <dd class="col-sm-9">
+                    @(Model.DueDate.HasValue ? Model.DueDate.Value.ToString("MMM dd, yyyy") : "N/A")
+                </dd>
+
+                <dt class="col-sm-3">Completion Date</dt>
+                <dd class="col-sm-9">
+                    @(Model.CompletionDate.HasValue ? Model.CompletionDate.Value.ToString("MMM dd, yyyy") : "N/A")
+                </dd>
+
+                <dt class="col-sm-3">Description</dt>
+                <dd class="col-sm-9">@Model.TaskDescription</dd>
+            </dl>
+
+            <div class="mt-4">
+                <a asp-action="Edit" asp-route-id="@Model.TaskId" class="btn btn-warning me-2">Edit</a>
+                <a asp-action="Index" asp-route-projectId="@Model.ProjectId" class="btn btn-secondary">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container py-4">
+    <h2 class="fw-bold text-primary mb-3"><i class="bi bi-speedometer2 me-2"></i>Welcome, Admin!</h2>
+    <p class="text-muted mb-4">Use the panels below to manage users and monitor system activities.</p>
+
+    <div class="row g-4">
+        <!-- View All Users -->
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm h-100 hover-shadow">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-3"
+                             style="width: 60px; height: 60px;">
+                            <i class="bi bi-people-fill fs-3"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title mb-1">View All Users</h5>
+                            <p class="text-muted mb-0 small">Manage Freelancer and Employer accounts</p>
+                        </div>
+                    </div>
+                    <a asp-action="Users" class="btn btn-primary w-100 mt-3">
+                        <i class="bi bi-arrow-right-circle me-1"></i> Go to User Management
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audit Logs -->
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm h-100 hover-shadow">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-warning text-dark rounded-circle d-flex justify-content-center align-items-center me-3"
+                             style="width: 60px; height: 60px;">
+                            <i class="bi bi-journal-check fs-3"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title mb-1">Audit Logs</h5>
+                            <p class="text-muted mb-0 small">Track login and logout activity</p>
+                        </div>
+                    </div>
+                    <a asp-action="AuditLogs" class="btn btn-warning text-dark w-100 mt-3">
+                        <i class="bi bi-arrow-right-circle me-1"></i> View Audit Logs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hover Effect Styling -->
+<style>
+    .hover-shadow:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+        transform: translateY(-2px);
+        transition: all 0.3s ease-in-out;
+    }
+</style>

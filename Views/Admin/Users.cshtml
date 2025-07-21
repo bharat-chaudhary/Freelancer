@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Freelancer.Models.User>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "User Management";
+}
+
+<div class="container py-4">
+    <h2 class="fw-bold text-primary mb-4">User Management</h2>
+
+    <!-- Search Form -->
+    <form asp-action="Users" method="get" class="mb-3">
+        <div class="input-group" style="max-width: 400px;">
+            <input type="text" name="search" class="form-control" placeholder="Search by username, email, or role..." value="@ViewBag.Search" />
+            <button type="submit" class="btn btn-outline-primary">
+                <i class="bi bi-search"></i> Search
+            </button>
+        </div>
+    </form>
+
+    <!-- User Table -->
+    <div class="table-responsive shadow rounded">
+        <table class="table table-hover align-middle" id="usersTable">
+            <thead class="table-dark">
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.Username</td>
+                        <td>@user.Email</td>
+                        <td><span class="badge bg-info text-dark">@user.Role</span></td>
+                        <td>
+                            <a asp-action="UserDetails" asp-route-id="@user.UserId" class="btn btn-outline-primary btn-sm me-1">
+                                <i class="bi bi-eye"></i> View
+                            </a>
+                            <form asp-action="DeleteUser" asp-route-id="@user.UserId" method="post" class="d-inline"
+                                  onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                <button type="submit" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

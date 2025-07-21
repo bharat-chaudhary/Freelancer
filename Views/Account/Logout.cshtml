@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Logout";
+}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
+            <i class="bi bi-briefcase"></i> Freelancer
+        </a>
+
+        <!-- Navbar Toggle (for mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                @if (Context.Session.GetString("Username") != null)
+                {
+                    <li class="nav-item">
+                        <span class="nav-link fw-bold text-dark">
+                            Welcome, @Context.Session.GetString("Username")!
+                        </span>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-danger px-3" asp-controller="Account" asp-action="Logout">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary px-3" asp-controller="Account" asp-action="Login">
+                            <i class="bi bi-person-circle"></i> Login
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>

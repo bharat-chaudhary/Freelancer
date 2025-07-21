@@ -1,0 +1,58 @@
+﻿@model Freelancer.Models.User
+@{
+    Layout = "~/Views/Shared/_EmployerLayout.cshtml";
+    ViewData["Title"] = "Employer Dashboard";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4">Edit Profile</h2>
+
+        <form asp-action="EditProfile" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <input type="hidden" asp-for="UserId" />
+
+            <div class="row">
+                <!-- Full Name -->
+                <div class="col-md-6 mb-3">
+                    <label asp-for="FullName" class="form-label fw-bold">Full Name</label>
+                    <input asp-for="FullName" class="form-control" placeholder="Enter full name" required />
+                    <div class="invalid-feedback">Full name is required.</div>
+                </div>
+
+                <!-- Contact Number -->
+                <div class="col-md-6 mb-3">
+                    <label asp-for="ContactNumber" class="form-label fw-bold">Contact Number</label>
+                    <input asp-for="ContactNumber" type="tel" class="form-control" placeholder="Enter contact number" required />
+                    <div class="invalid-feedback">Contact number is required.</div>
+                </div>
+            </div>
+
+            <!-- Bio -->
+            <div class="mb-3">
+                <label asp-for="Bio" class="form-label fw-bold">Bio</label>
+                <textarea asp-for="Bio" class="form-control" rows="3" placeholder="Write a short bio..."></textarea>
+            </div>
+
+            <!-- Profile Picture -->
+            <div class="mb-3">
+                <label class="form-label fw-bold">Profile Picture</label>
+                <input type="file" name="profilePicture" class="form-control" accept="image/*" />
+            </div>
+
+            <!-- Profile Preview -->
+            <div class="text-center">
+                <img src="@Url.Content(Model.ProfilePicture ?? "/images/contacts_16076050.png")" id="profilePreview" class="rounded-circle border shadow-sm" width="120" height="120" />
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-center mt-4">
+                <button type="submit" class="btn btn-success me-2">
+                    <i class="bi bi-check-circle"></i> Save Changes
+                </button>
+                <a asp-action="Profile" class="btn btn-secondary">
+                    <i class="bi bi-x-circle"></i> Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Freelancer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|d:\\freelancer\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|d:\\freelancer\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|d:\\freelancer\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|d:\\freelancer\\views\\employer\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|solutionrelative:views\\employer\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|d:\\freelancer\\views\\freelancer\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|solutionrelative:views\\freelancer\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|d:\\freelancer\\views\\shared\\_freelancerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|solutionrelative:views\\shared\\_freelancerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|d:\\freelancer\\freelancer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9F366B3C-9D34-4930-8BDA-7E78DAD4C3B8}|Freelancer.csproj|solutionrelative:freelancer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "D:\\Freelancer\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
+              "ToolTip": "D:\\Freelancer\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Controllers\\PaymentController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T05:05:22.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Freelancer\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Freelancer\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T04:34:26.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\Freelancer\\Views\\Employer\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employer\\Dashboard.cshtml",
+              "ToolTip": "D:\\Freelancer\\Views\\Employer\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Employer\\Dashboard.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T16:06:32.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\Freelancer\\Views\\Freelancer\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Freelancer\\Dashboard.cshtml",
+              "ToolTip": "D:\\Freelancer\\Views\\Freelancer\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Freelancer\\Dashboard.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGgAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T16:03:00.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_FreelancerLayout.cshtml",
+              "DocumentMoniker": "D:\\Freelancer\\Views\\Shared\\_FreelancerLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_FreelancerLayout.cshtml",
+              "ToolTip": "D:\\Freelancer\\Views\\Shared\\_FreelancerLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_FreelancerLayout.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T16:02:45.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Freelancer.csproj",
+              "DocumentMoniker": "D:\\Freelancer\\Freelancer.csproj",
+              "RelativeDocumentMoniker": "Freelancer.csproj",
+              "ToolTip": "D:\\Freelancer\\Freelancer.csproj",
+              "RelativeToolTip": "Freelancer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-28T15:55:38.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Freelancer\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\Freelancer\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-28T15:43:08.77Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

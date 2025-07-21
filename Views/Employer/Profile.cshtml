@@ -1,0 +1,35 @@
+﻿@model Freelancer.Models.User
+@{
+    Layout = "~/Views/Shared/_EmployerLayout.cshtml";
+    ViewData["Title"] = "Profile";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-4 text-center">
+                <!-- Profile Image -->
+                <img src="@Model.ProfilePicture" alt="Profile Picture" class="rounded-circle mx-auto d-block img-thumbnail" width="150" height="150" style="object-fit: cover;">
+
+                <!-- User Details -->
+                <h3 class="mt-3 fw-bold">@Model.Username</h3>
+                <p class="text-muted">@Model.Email</p>
+                <span class="badge bg-primary px-3 py-2 fs-6">@Model.Role</span>
+
+                <hr>
+
+                <div class="text-start">
+                    <p><strong>Full Name:</strong> @Model.FullName</p>
+                    <p><strong>Bio:</strong> @Model.Bio</p>
+                    <p><strong>Contact:</strong> @Model.ContactNumber</p>
+                </div>
+
+                <!-- Edit Button -->
+                <a asp-action="EditProfile" class="btn btn-warning mt-3">
+                    <i class="bi bi-pencil-square"></i> Edit Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+

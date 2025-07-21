@@ -1,0 +1,61 @@
+﻿@model Freelancer.Models.ProjectTask
+
+@{
+    Layout = "~/Views/Shared/_FreelancerLayout.cshtml";
+    ViewData["Title"] = "Create New Task";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Create New Task for @ViewBag.ProjectTitle</h2>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="Create" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="ProjectId" value="@ViewBag.ProjectId" />
+
+                <div class="form-group mb-3">
+                    <label asp-for="Title" class="form-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Status" class="form-label"></label>
+                    <select asp-for="Status" class="form-select">
+                        <option value="ToDo">To Do</option>
+                        <option value="InProgress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="OnHold">On Hold</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="DueDate" class="form-label"></label>
+                    <input asp-for="DueDate" class="form-control" type="date" />
+                    <span asp-validation-for="DueDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="CompletionDate" class="form-label"></label>
+                    <input asp-for="CompletionDate" class="form-control" type="date" />
+                    <span asp-validation-for="CompletionDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="TaskDescription" class="form-label"></label>
+                    <textarea asp-for="TaskDescription" class="form-control" rows="4"></textarea>
+                    <span asp-validation-for="TaskDescription" class="text-danger"></span>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a asp-action="Index" asp-route-projectId="@ViewBag.ProjectId" class="btn btn-secondary me-md-2">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Create Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
