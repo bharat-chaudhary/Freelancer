@@ -224,7 +224,3 @@ FOREIGN KEY (Payee_ID) REFERENCES User(User_ID)
 Bachelor of Agricultural Information Technology
 Anand Agricultural University
 
----
-
-If you want, I can now **add a visual architecture diagram + DFD + ERD images directly into this README** so it’s 100% complete for GitHub.
-That would make it look professional and ready to submit or showcase.
